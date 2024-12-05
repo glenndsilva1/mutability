@@ -1,0 +1,14 @@
+Date first = new Date(1l);
+Date second = new Date(1l);
+first.setTime(2l);
+assert.first.equals(second);
+
+
+========================================================================================================
+
+Map<Date,String> map = new HashMap<>();
+Date date = new Date();
+map.put(date, "hello world!");
+date.setTime(12345l);
+assert.map.contains(date);  // false changing the map turns to dangerous 
+
