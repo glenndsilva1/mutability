@@ -4,7 +4,7 @@ public String post(Request request){
 }
 
 Request r = new Request("http://www.google.com");
-r.setMethod("GET");
+r.setMethod("GET"); // mutating here 
 String first = this.post(r);
 String second = r.fetch();
 
