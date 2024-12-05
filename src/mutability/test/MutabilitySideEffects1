@@ -1,0 +1,21 @@
+public String post(Request request){
+	request.setMethod("POST");
+	return request.fetch();
+}
+
+Request r = new Request("http://www.google.com");
+r.setMethod("GET");
+String first = this.post(r);
+String second = r.fetch();
+
+
+=============================================================================================
+
+public String post(Request request){
+	request.withMethod("POST").fetch();
+}
+
+Request r = new Request("http://www.google.com").withMethod("GET");
+String first = this.post(r);
+String second = r.fetch();
+
